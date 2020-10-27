@@ -46,7 +46,7 @@ export class Saturation extends (PureComponent || Component) {
   unbindEventListeners(e) {
     window.removeEventListener('mousemove', this.handleChange)
     window.removeEventListener('mouseup', this.handleMouseUp)
-    if(e.currentTarget) {
+    if(e && e.currentTarget) {
       e.currentTarget.removeEventListener('mousemove', this.handleChange)
       e.currentTarget.removeEventListener('mouseup', this.handleMouseUp)
     }
